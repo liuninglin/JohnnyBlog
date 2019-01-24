@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Using docker command to obtain dockers' IP]]></title>
+    <url>%2Fposts%2Fde75b356.html</url>
+    <content type="text"><![CDATA[check specific container’s ip address:1docker inspect -f '&#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' your_container_name_or_id check all containers’ ip address:1docker inspect -f '&#123;&#123;.Name&#125;&#125; - &#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' $(docker ps -aq)]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Some terms in Big Data Ecosystem]]></title>
     <url>%2Fposts%2Faa930aca.html</url>
     <content type="text"><![CDATA[DMP(Data Management Plateform)A palteform for collecting and managing data for digital marketing purpose. DSP(Demand-side Plateform)A palteform that alows buyers of online advertising to manage ad exchange and pay to buy some adversiting banners according to Real-time bidding. SSP(Supply-side Plateform)A palteform that alows web publisher or digital media owner to manage their advertising banners and receive money from this plateform. MDM(Master Data Management)A business method that help companies or enterprises to integrate, manage, store critical data in a single point of reference.These data can provide for other busniess plateforms or business systems(B2B, B2C, CRM, OMS and etc).And master data also are useful for marketing decision and marketing analysis.In china, Alibaba announced a business term(“数据中台”) that is based on MDM.So, in the next few years, we need to build a digital smart plateform to collect all sources of busniess data that can provideinformation for all kinds of business systems or plateform and bread down obstacles between business systems in companies or enterpises.]]></content>
