@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://liuninglin.github.io/posts/eacbb695/hexo_comment_module1.png">
 <meta property="og:image" content="https://liuninglin.github.io/posts/eacbb695/hexo_comment_module2.png">
 <meta property="og:image" content="https://liuninglin.github.io/posts/eacbb695/hexo_comment_module3.png">
-<meta property="og:updated_time" content="2019-01-24T02:50:10.079Z">
+<meta property="og:updated_time" content="2019-01-24T03:52:37.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Hexo]Some tricks for using hexo efficiently">
 <meta name="twitter:description" content="change theme add theme to your hexo (eg. theme next)  1git clone https://github.com/theme-next/hexo-theme-next themes/next  update your blog config file(_config.yml, not your theme config file)  1234#">
@@ -451,7 +451,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-24 10:50:10" itemprop="dateModified" datetime="2019-01-24T10:50:10+08:00">2019-01-24</time>
+                <time title="Modified: 2019-01-24 11:52:37" itemprop="dateModified" datetime="2019-01-24T11:52:37+08:00">2019-01-24</time>
               
             
           </span>
@@ -627,6 +627,37 @@
 </li>
 <li><p><strong>[not required]</strong> you can also add white list for security</p>
 <p> <img src="/posts/eacbb695/hexo_comment_module3.png" alt="hexo_comment_module3"></p>
+</li>
+</ol>
+<h2 id="use-image-plugin"><a href="#use-image-plugin" class="headerlink" title="use image plugin"></a>use image plugin</h2><ol>
+<li><p>install “hexo-asset-image” plugin</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p>update your blog config file (_config.yml)</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>if you use abbrlink plugin to change your permalink attribute in your blog config file, you need to edit this plugin to fit your config (node_modules/hexo-asset-image/index.js). Then you add a code block into this javascript file.  </p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> link = data.permalink;	</span><br><span class="line">link = link.replace(<span class="string">'.html'</span>, <span class="string">'/'</span>);  <span class="comment">//新增加，针对修改后的permalink</span></span><br><span class="line"><span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ok, you can generate your new static html file.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="add-creative-commons-module-to-your-blog"><a href="#add-creative-commons-module-to-your-blog" class="headerlink" title="add creative commons module to your blog"></a>add creative commons module to your blog</h2><p>It is convenient and useful for bloger to announce your blog copyright announcement. So, you can add this below your posts or add this in your profile information page.</p>
+<ol>
+<li><p>update your theme config file</p>
+<pre><code class="yml"><span class="comment"># Creative Commons 4.0 International License.</span>
+<span class="comment"># https://creativecommons.org/share-your-work/licensing-types-examples</span>
+<span class="comment"># Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</span>
+<span class="attr">creative_commons:</span>
+<span class="attr">  license:</span> <span class="string">by-nc-sa</span>
+<span class="attr">  sidebar:</span> <span class="literal">true</span>
+<span class="attr">  post:</span> <span class="literal">true</span>
+</code></pre>
 </li>
 </ol>
 
@@ -972,7 +1003,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#change-theme"><span class="nav-number">1.</span> <span class="nav-text">change theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-RSS-plugin"><span class="nav-number">2.</span> <span class="nav-text">add RSS plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change-the-code-block-theme"><span class="nav-number">3.</span> <span class="nav-text">change the code block theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#record-the-number-of-viewers"><span class="nav-number">4.</span> <span class="nav-text">record the number of viewers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-the-excerpt"><span class="nav-number">5.</span> <span class="nav-text">generate the excerpt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-search-plugin"><span class="nav-number">6.</span> <span class="nav-text">add search plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-share-plugin"><span class="nav-number">7.</span> <span class="nav-text">add share plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-google-analytics"><span class="nav-number">8.</span> <span class="nav-text">add google analytics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-reward"><span class="nav-number">9.</span> <span class="nav-text">add reward</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-a-permanent-post-address"><span class="nav-number">10.</span> <span class="nav-text">generate a permanent post address</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-comment-module-valine"><span class="nav-number">11.</span> <span class="nav-text">add comment module (valine)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#change-theme"><span class="nav-number">1.</span> <span class="nav-text">change theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-RSS-plugin"><span class="nav-number">2.</span> <span class="nav-text">add RSS plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change-the-code-block-theme"><span class="nav-number">3.</span> <span class="nav-text">change the code block theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#record-the-number-of-viewers"><span class="nav-number">4.</span> <span class="nav-text">record the number of viewers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-the-excerpt"><span class="nav-number">5.</span> <span class="nav-text">generate the excerpt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-search-plugin"><span class="nav-number">6.</span> <span class="nav-text">add search plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-share-plugin"><span class="nav-number">7.</span> <span class="nav-text">add share plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-google-analytics"><span class="nav-number">8.</span> <span class="nav-text">add google analytics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-reward"><span class="nav-number">9.</span> <span class="nav-text">add reward</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-a-permanent-post-address"><span class="nav-number">10.</span> <span class="nav-text">generate a permanent post address</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-comment-module-valine"><span class="nav-number">11.</span> <span class="nav-text">add comment module (valine)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-image-plugin"><span class="nav-number">12.</span> <span class="nav-text">use image plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-creative-commons-module-to-your-blog"><span class="nav-number">13.</span> <span class="nav-text">add creative commons module to your blog</span></a></li></ol></div>
             
 
           </div>
