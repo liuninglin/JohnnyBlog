@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Odyssey]]></title>
+    <url>%2Fposts%2F56e69a1d.html</url>
+    <content type="text"><![CDATA[It is really a great determination for me to give up comfortable and easy enviroment where I can complete all tasks successfully. Now, I had been to Shanghai for almost one month. And I need to study new development technology and make new friends among this unfamiliar city where I will be surrounded with loneliness. Nevertheless, I really hope that I can meet all kinds of difficultis which offer me huge experience to upgrade myself. So, I choose to jump out of my comfortable cage and forage challenges. In my opinion, It is a truly tiger that runs above Africa prairie not one in the fancy cage. Finally, I literally hope that my goal will be hit after one year and start with a more rough journey (Odyssey).]]></content>
+      <categories>
+        <category>Life log</category>
+      </categories>
+      <tags>
+        <tag>Shanghai</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Using docker command to obtain dockers' IP]]></title>
     <url>%2Fposts%2Fde75b356.html</url>
     <content type="text"><![CDATA[check specific container’s ip address:1docker inspect -f '&#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' your_container_name_or_id check all containers’ ip address:1docker inspect -f '&#123;&#123;.Name&#125;&#125; - &#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' $(docker ps -aq)]]></content>

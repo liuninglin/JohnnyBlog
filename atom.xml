@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liuninglin.github.io/"/>
-  <updated>2019-01-24T17:36:01.597Z</updated>
+  <updated>2019-01-24T18:46:44.490Z</updated>
   <id>https://liuninglin.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Odyssey</title>
+    <link href="https://liuninglin.github.io/posts/56e69a1d.html"/>
+    <id>https://liuninglin.github.io/posts/56e69a1d.html</id>
+    <published>2019-01-24T18:33:51.000Z</published>
+    <updated>2019-01-24T18:46:44.490Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/posts/56e69a1d/odyssey.jpg" alt="odyssey"><br>It is really a great determination for me to give up comfortable and easy enviroment where I can complete all tasks successfully. Now, I had been to Shanghai for almost one month. And I need to study new development technology and make new friends among this unfamiliar city where I will be surrounded with loneliness.<br><a id="more"></a></p><p>Nevertheless, I really hope that I can meet all kinds of difficultis which offer me huge experience to upgrade myself. So, I choose to jump out of my comfortable cage and forage challenges. In my opinion, It is a truly tiger that runs above Africa prairie not one in the fancy cage.  </p><p>Finally, I literally hope that my goal will be hit after one year and start with a more rough journey (Odyssey).</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/posts/56e69a1d/odyssey.jpg&quot; alt=&quot;odyssey&quot;&gt;&lt;br&gt;It is really a great determination for me to give up comfortable and easy enviroment where I can complete all tasks successfully. Now, I had been to Shanghai for almost one month. And I need to study new development technology and make new friends among this unfamiliar city where I will be surrounded with loneliness.&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Life log" scheme="https://liuninglin.github.io/categories/Life-log/"/>
+    
+    
+      <category term="Shanghai" scheme="https://liuninglin.github.io/tags/Shanghai/"/>
+    
+      <category term="life" scheme="https://liuninglin.github.io/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>Using docker command to obtain dockers&#39; IP</title>
