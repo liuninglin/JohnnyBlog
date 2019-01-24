@@ -4,6 +4,10 @@
     <title><![CDATA[Using docker command to obtain dockers' IP]]></title>
     <url>%2Fposts%2Fde75b356.html</url>
     <content type="text"><![CDATA[check specific container’s ip address:1docker inspect -f '&#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' your_container_name_or_id check all containers’ ip address:1docker inspect -f '&#123;&#123;.Name&#125;&#125; - &#123;&#123;range.NetworkSettings.Networks&#125;&#125;&#123;&#123;.IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;' $(docker ps -aq)]]></content>
+      <categories>
+        <category>Operation</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>Docker</tag>
       </tags>
