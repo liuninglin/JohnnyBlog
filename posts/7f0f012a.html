@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Johnny&#39;s Odyssey">
 <meta property="og:description" content="System RequirementsAt first, we need to think about the setups of VMs. So, I list a table for VMs below.    hostname ip operating system RAM disk space package     master1.bigdata.com 192.168.110.150">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-28T07:19:36.600Z">
+<meta property="og:updated_time" content="2019-01-28T08:08:17.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Step by Step Tutorial for Ambari Installation">
 <meta name="twitter:description" content="System RequirementsAt first, we need to think about the setups of VMs. So, I list a table for VMs below.    hostname ip operating system RAM disk space package     master1.bigdata.com 192.168.110.150">
@@ -430,7 +430,7 @@
                 
               
 
-              <time title="Created: 2019-01-28 14:22:51 / Modified: 15:19:36" itemprop="dateCreated datePublished" datetime="2019-01-28T14:22:51+08:00">2019-01-28</time>
+              <time title="Created: 2019-01-28 14:22:51 / Modified: 16:08:17" itemprop="dateCreated datePublished" datetime="2019-01-28T14:22:51+08:00">2019-01-28</time>
             
 
             
@@ -563,7 +563,7 @@
 <li>Set the name of VM  </li>
 <li>Choose data storage  </li>
 <li>Choose hardware configuration  </li>
-<li>Load centos6 ios file into CDROM when booting<br> You can use minimum version of centos. Then you need to click the option “Running system installation with system booting”.</li>
+<li>Load centos6 ios file into CD-ROM when booting<br> You can use minimum version of centos. Then you need to click the option “Running system installation with system booting”.</li>
 <li>Configuration complete  </li>
 </ol>
 </li>
@@ -574,9 +574,50 @@
 </li>
 </ol>
 <h2 id="VM-Preparation"><a href="#VM-Preparation" class="headerlink" title="VM Preparation"></a>VM Preparation</h2><h3 id="1-Configuration-and-Installation-for-VMs-master-and-slave-servers"><a href="#1-Configuration-and-Installation-for-VMs-master-and-slave-servers" class="headerlink" title="1. Configuration and Installation for VMs(master and slave servers)"></a>1. Configuration and Installation for VMs(master and slave servers)</h3><ol>
-<li>Change system’s hostname   </li>
-<li>Set up password-less SSH  </li>
-<li><p>Install ntpd  </p>
+<li><p>Change system’s hostname on all servers </p>
+<ol>
+<li><p>Update file(/etc/sysctl.conf), add a item </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kernel.domainname=master1.bigdata.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update file(/etc/hosts), add doamins</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.110.150 master1.bigdata.com master1</span><br><span class="line">192.168.110.151 slave1.bigdata.com slave1</span><br><span class="line">192.168.110.152 slave2.bigdata.com slave2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update file(/etc/sysconfig/network)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=master1.bigdata.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reboot systems</p>
+</li>
+<li><p>Check the correction of hostname</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostname</span><br><span class="line">hostname -f</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>Set up password-less SSH on all servers</p>
+<ol>
+<li><p>Disable SELinux</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/selinux/config</span><br></pre></td></tr></table></figure>
+<p> Set disabled for SELinux:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable access for using public key.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p> Delete comment signal(“#”) blow:  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Generate public key and private key on master server.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<p> Then, click default option for configuration.</p>
+</li>
+<li><p>Create directories and copy public key to slave servers.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slave$ mkdir ~/.ssh</span><br><span class="line">slave$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">slave$ touch authorized_keys</span><br></pre></td></tr></table></figure>
+<p> Login to master server, then copy public key:  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">maseter$ scp ~/.ssh/id_rsa.pub root@slave1:~/.ssh</span><br></pre></td></tr></table></figure>
+<p> Login to slave server, then copy content from public key to a file(authorized_keys):  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave$ cp ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>Install ntpd on all servers.</p>
 <ol>
 <li><p>Check to see if you have installed ntpd.   </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ntp</span><br></pre></td></tr></table></figure>
@@ -586,7 +627,7 @@
 </li>
 </ol>
 </li>
-<li><p>Close transparent huge page. </p>
+<li><p>Close transparent huge page on all servers.</p>
 <ol>
 <li><p>Append code block to file(/etc/rc.local) for closing transparent huge page.         </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
