@@ -386,6 +386,241 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liuninglin.github.io/posts/7f0f012a.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johnny Liu">
+      <meta itemprop="description" content="Stay foolish. Stay hungry.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johnny's Odyssey">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/posts/7f0f012a.html" class="post-title-link" itemprop="url">Step by Step Tutorial for Ambari Installation</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-28 14:22:51 / Modified: 15:08:23" itemprop="dateCreated datePublished" datetime="2019-01-28T14:22:51+08:00">2019-01-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Back-end/" itemprop="url" rel="index"><span itemprop="name">Back-end</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Back-end/BigData/" itemprop="url" rel="index"><span itemprop="name">BigData</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/posts/7f0f012a.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/posts/7f0f012a.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/7f0f012a.html" class="leancloud_visitors" data-flag-title="Step by Step Tutorial for Ambari Installation">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="System-Requirements"><a href="#System-Requirements" class="headerlink" title="System Requirements"></a>System Requirements</h2><p>At first, we need to think about the setups of VMs. So, I list a table for VMs below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">hostname</th>
+<th style="text-align:center">ip</th>
+<th style="text-align:center">operating system</th>
+<th style="text-align:center">RAM</th>
+<th style="text-align:center">disk space</th>
+<th style="text-align:center">package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">master1.bigdata.com</td>
+<td style="text-align:center">192.168.110.150</td>
+<td style="text-align:center">centos6.5 64位</td>
+<td style="text-align:center">16g</td>
+<td style="text-align:center">50g</td>
+<td style="text-align:center">ambari-server<br>namenode</td>
+</tr>
+<tr>
+<td style="text-align:center">slave1.bigdata.com</td>
+<td style="text-align:center">192.168.110.151</td>
+<td style="text-align:center">centos6.5 64位</td>
+<td style="text-align:center">16g</td>
+<td style="text-align:center">50g</td>
+<td style="text-align:center">ambari-agent<br>datanode</td>
+</tr>
+<tr>
+<td style="text-align:center">slave2.bigdata.com</td>
+<td style="text-align:center">192.168.110.152</td>
+<td style="text-align:center">centos6.5 64位</td>
+<td style="text-align:center">16g</td>
+<td style="text-align:center">50g</td>
+<td style="text-align:center">ambari-agent<br>datanode</td>
+</tr>
+</tbody>
+</table>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/7f0f012a.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://liuninglin.github.io/posts/56e69a1d.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1450,7 +1685,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1506,7 +1741,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
