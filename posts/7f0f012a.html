@@ -108,10 +108,34 @@
 <meta property="og:site_name" content="Johnny&#39;s Odyssey">
 <meta property="og:description" content="System RequirementsAt first, we need to think about the setups of VMs. So, I list a table for VMs below.    hostname ip operating system RAM disk space package     master1.bigdata.com 192.168.110.150">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-29T08:25:17.414Z">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_1.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_2.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_3.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_4.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_5.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_6.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_7.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_8.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/li_9.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_1.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_2.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_3.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_4.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_5.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_6.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_7.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_8.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_9.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_10.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_11.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_12.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_13.png">
+<meta property="og:image" content="https://liuninglin.github.io/posts/7f0f012a/ai_14.png">
+<meta property="og:updated_time" content="2019-01-29T09:13:34.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Step by Step Tutorial for Ambari Installation">
 <meta name="twitter:description" content="System RequirementsAt first, we need to think about the setups of VMs. So, I list a table for VMs below.    hostname ip operating system RAM disk space package     master1.bigdata.com 192.168.110.150">
+<meta name="twitter:image" content="https://liuninglin.github.io/posts/7f0f012a/li_1.png">
 
 
 
@@ -447,7 +471,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-29 16:25:17" itemprop="dateModified" datetime="2019-01-29T16:25:17+08:00">2019-01-29</time>
+                <time title="Modified: 2019-01-29 17:13:34" itemprop="dateModified" datetime="2019-01-29T17:13:34+08:00">2019-01-29</time>
               
             
           </span>
@@ -579,9 +603,27 @@
 <li>Configuration complete  </li>
 </ol>
 </li>
-<li>Operating system installation  <ol>
+<li><p>Operating system installation  </p>
+<ol>
 <li>Power on the VM</li>
-<li>Choose basic information of operation system.</li>
+<li><p>Choose basic information of operation system.</p>
+<ol>
+<li><p>Choose the first one.<br><img src="/posts/7f0f012a/li_1.png" alt="Choose the first one"></p>
+</li>
+<li><p>Click “skip” to continue.<br><img src="/posts/7f0f012a/li_2.png" alt="Click &quot;skip&quot; to continue"></p>
+</li>
+<li><p>Choose language, keyborad and timezone.<br><img src="/posts/7f0f012a/li_3.png" alt="Choose language"><br><img src="/posts/7f0f012a/li_4.png" alt="Choose keyboard"><br><img src="/posts/7f0f012a/li_5.png" alt="Choose timezone"></p>
+</li>
+<li><p>Set root password.<br><img src="/posts/7f0f012a/li_6.png" alt="Set root password">  </p>
+</li>
+<li><p>Click “Using entire drive” to continue.<br><img src="/posts/7f0f012a/li_7.png" alt="Click &quot;Using entire drive&quot; to continue">  </p>
+</li>
+<li><p>Choose “Write changes to disk” to continue.<br><img src="/posts/7f0f012a/li_8.png" alt="Choose &quot;Write changes to disk&quot; to continue">  </p>
+</li>
+<li><p>Reboot.<br><img src="/posts/7f0f012a/li_9.png" alt="Reboot">  </p>
+</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
@@ -591,12 +633,9 @@
 </li>
 <li><p>Enable network adapter.  </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-eth0</span><br><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-eth1</span><br><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-eth2</span><br></pre></td></tr></table></figure>
+<p> Then, enable it to run after system booting</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ONBOOT=yes</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<pre><code>Then, enable it to run after system booting
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ONBOOT=yes</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="2">
 <li><p>Using tool ping to check status of accessing public network and local network.   </p>
 </li>
 <li><p>Change system’s hostname on all servers.</p>
@@ -604,128 +643,88 @@
 <li><p>Update file(/etc/sysctl.conf), add a item </p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kernel.domainname=master1.bigdata.com</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>Update file(/etc/hosts), add doamins.</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.110.150 master1.bigdata.com master1</span><br><span class="line">192.168.110.151 slave1.bigdata.com slave1</span><br><span class="line">192.168.110.152 slave2.bigdata.com slave2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Update file(/etc/sysconfig/network)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=master1.bigdata.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reboot systems</p>
+</li>
+<li><p>Check the correction of hostname</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostname</span><br><span class="line">hostname -f</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<pre><code>2. Update file(/etc/hosts), add doamins.
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.110.150 master1.bigdata.com master1</span><br><span class="line">192.168.110.151 slave1.bigdata.com slave1</span><br><span class="line">192.168.110.152 slave2.bigdata.com slave2</span><br></pre></td></tr></table></figure>
-
-
-3. Update file(/etc/sysconfig/network)
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=master1.bigdata.com</span><br></pre></td></tr></table></figure>
-
-
-4. Reboot systems
-5. Check the correction of hostname
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostname</span><br><span class="line">hostname -f</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="4">
+</li>
 <li><p>Set up password-less SSH on all servers</p>
 <ol>
 <li><p>Disable SELinux</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/selinux/config</span><br></pre></td></tr></table></figure>
+<p> Set disabled for SELinux:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable access for using public key.<br> <strong>Warning: File name is sshd_config, not ssh_config.</strong>  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p> Delete comment signal(“#”) blow:  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Generate public key and private key on master server.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<p> Then, click default option for configuration.</p>
+</li>
+<li><p>Create directories and copy public key to slave servers.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slave$ mkdir ~/.ssh</span><br><span class="line">slave$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">slave$ touch authorized_keys</span><br></pre></td></tr></table></figure>
+<p> Login to master server, then copy public key:  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">maseter$ scp ~/.ssh/id_rsa.pub root@slave1:~/.ssh</span><br></pre></td></tr></table></figure>
+<p> Login to slave server, then copy content from public key to a file(authorized_keys):  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave$ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
-</ol>
-<pre><code>    Set disabled for SELinux:
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
-
-
-2. Enable access for using public key.  
-    **Warning: File name is sshd_config, not ssh_config.**  
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-
-
-    Delete comment signal(&quot;#&quot;) blow:  
-
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-
-
-3. Generate public key and private key on master server.
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
-
-
-    Then, click default option for configuration.
-
-4. Create directories and copy public key to slave servers.
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slave$ mkdir ~/.ssh</span><br><span class="line">slave$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">slave$ touch authorized_keys</span><br></pre></td></tr></table></figure>
-
-
-    Login to master server, then copy public key:  
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">maseter$ scp ~/.ssh/id_rsa.pub root@slave1:~/.ssh</span><br></pre></td></tr></table></figure>
-
-
-    Login to slave server, then copy content from public key to a file(authorized_keys):  
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slave$ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="6">
 <li><p>Install ntpd on all servers.</p>
 <ol>
 <li><p>Check to see if you have installed ntpd.   </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ntp</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>If not, install ntpd  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<pre><code>2. If not, install ntpd  
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="7">
+</li>
 <li><p>Close transparent huge page on all servers.</p>
 <ol>
 <li><p>Append code block to file(/etc/rc.local) for closing transparent huge page.         </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
+<p> code block:  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -f /sys/kernel/mm/transparent_hugepage/enabled; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> never &gt; /sys/kernel/mm/transparent_hugepage/enabled</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -f /sys/kernel/mm/transparent_hugepage/defrag; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> never &gt; /sys/kernel/mm/transparent_hugepage/defrag</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reboot operating system.</p>
+</li>
+<li><p>Check the status of transparent huge page to ensure the status is “never”.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /sys/kernel/mm/redhat_transparent_hugepage/enabled</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
-<pre><code>    code block:  
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -f /sys/kernel/mm/transparent_hugepage/enabled; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> never &gt; /sys/kernel/mm/transparent_hugepage/enabled</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -f /sys/kernel/mm/transparent_hugepage/defrag; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> never &gt; /sys/kernel/mm/transparent_hugepage/defrag</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-
-2. Reboot operating system.
-
-3. Check the status of transparent huge page to ensure the status is &quot;never&quot;.
-
-    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /sys/kernel/mm/redhat_transparent_hugepage/enabled</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="2-Set-up-a-local-repository-on-master-server"><a href="#2-Set-up-a-local-repository-on-master-server" class="headerlink" title="2. Set up a local repository on master server."></a>2. Set up a local repository on master server.</h3><ol>
+<h3 id="2-Set-up-a-local-repository-on-master-server"><a href="#2-Set-up-a-local-repository-on-master-server" class="headerlink" title="2. Set up a local repository on master server."></a>2. Set up a local repository on master server.</h3><ol>
 <li><p>Install local repository tool.  </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install yum-utils createrepo</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Install http service.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="3">
 <li><p>Start http service.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="4">
 <li><p>Install tool wget.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="5">
 <li><p>Download ambari &amp; hdp package files to master server.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.4.2.0/ambari-2.4.2.0-centos6.tar.gz</span><br><span class="line">wget http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.20/repos/centos6/HDP-UTILS-1.1.0.20-centos6.tar.gz</span><br><span class="line">wget http://public-repo-1.hortonworks.com/HDP/centos6/2.x/updates/2.4.3.0/HDP-2.4.3.0-centos6-rpm.tar.gz</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="6">
 <li><p>Copy ambari and hdp packages to http dir, then untar them.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html</span><br><span class="line">mkdir hdp</span><br><span class="line">tar -xvf ambari-2.4.2.0-centos6.tar.gz -C /var/www/html</span><br><span class="line">tar -xvf HDP-2.4.3.0-centos6-rpm.tar.gz -C /var/www/html/hdp</span><br><span class="line">tar -xvf HDP-UTILS-1.1.0.20-centos6.tar.gz -C /var/www/html/hdp</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="7">
 <li><p>Check repository address for next step.</p>
 <p> Ambari base URL and gpgkey:  </p>
  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.110.150/AMBARI-2.4.2.0/centos6/2.4.2.0-136/  </span><br><span class="line">http://192.168.110.150/AMBARI-2.4.2.0/centos6/2.4.2.0-136/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins</span><br></pre></td></tr></table></figure>
@@ -736,25 +735,19 @@
 </li>
 <li><p>Copy repository config files.<br> ambari repo file:</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.4.3.0/ambari.repo -O /etc/yum.repos.d/ambari.repo</span><br></pre></td></tr></table></figure>
+<p> hdp repo file:    </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /var/www/html/hdp/HDP/centos6/2.x/updates/2.4.3.0/hdp.repo /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<pre><code>hdp repo file:    
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /var/www/html/hdp/HDP/centos6/2.x/updates/2.4.3.0/hdp.repo /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="9">
-<li>Update repository config files.<br> You ought to renew base URL and gpgkey URL in  your ambari.repo and hdp.repo files.</li>
+<li><p>Update repository config files.<br> You ought to renew base URL and gpgkey URL in  your ambari.repo and hdp.repo files.</p>
+</li>
 </ol>
 <h3 id="3-Ambari-server-setup-on-master-server"><a href="#3-Ambari-server-setup-on-master-server" class="headerlink" title="3. Ambari-server setup on master server"></a>3. Ambari-server setup on master server</h3><ol>
 <li><p>Install ambari server </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install /var/www/html/AMBARI-2.4.2.0/centos6/2.4.2.0-136/ambari/ambari-server-2.4.2.0-136.x86_64.rpm</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="2">
 <li><p>Run command for ambari setup.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-server setup</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="3">
 <li><p>If you are not disable the SELinux, you need to press “y”.</p>
 </li>
 <li><p>If your ambari server under user root, you just need to press “n”.</p>
@@ -763,7 +756,8 @@
 </li>
 <li><p>Select JDK version, then follow steps to install it.</p>
 </li>
-<li><p>Choose database type<br> You can choose embeded database. If you choose mysql, you need to install mysql database on master server and input info for ambari setup.</p>
+<li><p>Choose database type<br> You can choose embeded database. If you choose mysql, you need to install mysql database on master server and input info for ambari setup. Then put a mysql connector into specific path and run a command below to specify the path of connector.  </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java.jar</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Run ambari-server</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-server start</span><br></pre></td></tr></table></figure>
@@ -773,21 +767,14 @@
 <li><p>Copy ambari-agent rpm file to slave servers.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /var/www/html/AMBARI-2.4.2.0/centos6/2.4.2.0-136/ambari/ambari-agent-2.4.2.0-136.x86_64.rpm root@slave_server_ip:~</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="2">
 <li><p>Install ambari-agent.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ~/ambari-agent-2.4.2.0-136.x86_64.rpm</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="3">
 <li><p>Renew ambari-server URL in config file.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ambari-agent/ambari.ini</span><br></pre></td></tr></table></figure>
+<p> Renew ambari-server URL below: </p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[server]</span><br><span class="line">hostname = master1.bigdata.com</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<pre><code>Renew ambari-server URL below: 
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[server]</span><br><span class="line">hostname = master1.bigdata.com</span><br></pre></td></tr></table></figure>
-</code></pre><ol start="4">
 <li><p>Run ambari-agent.</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-agent start</span><br></pre></td></tr></table></figure>
 </li>
@@ -796,20 +783,23 @@
 <ol>
 <li>Start the service httpd.</li>
 <li>Stop the service iptables.  </li>
-<li>Start the ambari-server on master server and ambari-agent on slave servers.</li>
-</ol>
-<p>If you want to start quickly, it is advisable to choose default options.</p>
-<ol>
-<li>Open your brower, then access to the WebUI for Amabari Installation.<br> URL: 192.168.110.150:8080<br> Account: admin<br> Password: admin</li>
-<li>Entitle cluster.</li>
-<li>Select version &amp; local installation address.<br> Choose local repository, then input base URL of HDP and HDP-UTILS.</li>
-<li>Install options</li>
-<li>Confirm hosts</li>
-<li>Choose services</li>
-<li>Assign masters</li>
-<li>Customize services</li>
-<li>Wait, wait, wait<br> If you get to this step successfully, you can drink a cup of coffee and enjoy this time.  </li>
-<li>Completion<br>So now, say hello world to Ambari.</li>
+<li>Start the ambari-server on master server and ambari-agent on slave servers.<br> If you want to start quickly, it is advisable to choose default options.</li>
+<li>Open your brower, then access to the WebUI and click the item (“Launch Install Wizard”)<br> URL: 192.168.110.150:8080<br> Account: admin<br> Password: admin<br> <img src="/posts/7f0f012a/ai_1.png" alt="login"><br> <img src="/posts/7f0f012a/ai_2.png" alt="login_success">  </li>
+<li>Get Started<br> <img src="/posts/7f0f012a/ai_3.png" alt="Get Started">  </li>
+<li>Select Version<br> Choose local repository, then input base URL of HDP and HDP-UTILS.<br> <img src="/posts/7f0f012a/ai_4.png" alt="Select Version">  </li>
+<li>Install Options<br> Input your master’s hostname and slaves’ hostnames. Then copy your master’s ssh private key into item.<br> <img src="/posts/7f0f012a/ai_5.png" alt="Install Options">  </li>
+<li><p>Confirm Hosts<br> <img src="/posts/7f0f012a/ai_6.png" alt="Confirm Hosts"> </p>
+<p> Just click “ok” to continue.<br> <img src="/posts/7f0f012a/ai_7.png" alt="click ok"> </p>
+</li>
+<li><p>Choose Services<br> Choose what service you want to add into your system. You can add new services into your system later on.<br> <img src="/posts/7f0f012a/ai_8.png" alt="Choose Services"> </p>
+<p> Just click “ok” to continue.<br> <img src="/posts/7f0f012a/ai_9.png" alt="click ok"> </p>
+</li>
+<li>Assign Masters<br><img src="/posts/7f0f012a/ai_10.png" alt="Assign Masters"> </li>
+<li>Assign Slaves and Clients<br><img src="/posts/7f0f012a/ai_11.png" alt="Assign Slaves and Clients"> </li>
+<li>Customize Services<br>You just need to input info for items with red exclamation mark.<br><img src="/posts/7f0f012a/ai_12.png" alt="Customize Services"> </li>
+<li>Review<br><img src="/posts/7f0f012a/ai_13.png" alt="Review"> </li>
+<li>Install, Start and Test<br>If you get to this step successfully, you can drink a cup of coffee and enjoy this time.<br><img src="/posts/7f0f012a/ai_14.png" alt="Install, Start and Test"> </li>
+<li>Summary<br>So now, say hello world to Ambari.</li>
 </ol>
 
       
