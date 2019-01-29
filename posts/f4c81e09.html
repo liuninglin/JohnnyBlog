@@ -501,32 +501,32 @@
       
         <ol>
 <li><p>Install mysql</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mysql-server</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mysql-server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Start mysql</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <a id="more"></a>
 <ol start="3">
 <li><p>Add users.</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">insert into mysql.user(user,host,password) values(<span class="string">'user_name'</span>,<span class="string">'localhost'</span>,password(<span class="string">'password'</span>));</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">insert into mysql.user(user,host,password) values(<span class="string">'user_name'</span>,<span class="string">'localhost'</span>,password(<span class="string">'password'</span>));</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 <p> The value of host:<br> %: connect to mysql server from any other machine<br> localhost: just local host<br> ip_address: specific ip address</p>
 </li>
 <li><p>Grant authority to users.</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on [db_name].[db_table_name] to [mysql_user_name]@[the_value_of_host] identified by <span class="string">'[mysql_user_password]'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on [db_name].[db_table_name] to [mysql_user_name]@[the_value_of_host] identified by <span class="string">'[mysql_user_password]'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 <p> The value of [the_value_of_host]:<br> %: connect to mysql server from any other machine<br> localhost: just local host<br> ip_address: specific ip address</p>
 <p> [all privileges] can be set with specific authority(“select,delete,update,create,drop”)</p>
 <p> [db_name] can be set with all databases(“*”)</p>
 <p> [db_table_name] can be set with all tables(“*”)</p>
 </li>
 <li><p>Update password.</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line">update user <span class="built_in">set</span> password=password(<span class="string">'your_new_password'</span>) <span class="built_in">where</span> user=<span class="string">'user_name'</span> and host=<span class="string">'host_name'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line">update user <span class="built_in">set</span> password=password(<span class="string">'your_new_password'</span>) <span class="built_in">where</span> user=<span class="string">'user_name'</span> and host=<span class="string">'host_name'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol start="4">
 <li><p>Delete users.</p>
- <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel=""><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line">delete from user <span class="built_in">where</span> user=<span class="string">'user_name'</span> and host=<span class="string">'host_name'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line">delete from user <span class="built_in">where</span> user=<span class="string">'user_name'</span> and host=<span class="string">'host_name'</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><strong>Attention:<br>It cannot be active when you forgot to run a command(“flush privileges”).</strong></p>
