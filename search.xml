@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Tar command in Linux]]></title>
+    <url>%2Fposts%2Fd36bfb53.html</url>
+    <content type="text"><![CDATA[options:-c: create the archive-x: extract the archive-f: create or extract with specific archive file name-t: displays or lists files in archived file-v: display info-z: using gzip -C: extract files into specific directory not current directory Creating an uncompressed tar archive. 1tar -cvf file.tar directory Creating a compressed tar archive by using gzip. 1tar -cvzf file.tar.gz directory Extracting files from archive. 1tar -xvf file.tar Extracting gzip tar archive. 1tar -xvzf file.tar.gz Extracting files into specific directory. 1tar -xvf file.tar -C /var/html/ Displays or lists files in archived file. 1tar -tvf file.tar]]></content>
+      <categories>
+        <category>Operation</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Tar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Operations for Mysql in Linux]]></title>
     <url>%2Fposts%2Ff4c81e09.html</url>
     <content type="text"><![CDATA[Install mysql 1yum -y install mysql-server Start mysql 1service mysqld start Add users. 1234mysql -uroot -pinsert into mysql.user(user,host,password) values('user_name','localhost',password('password'));flush privileges; The value of host: %: connect to mysql server from any other machine localhost: just local host ip_address: specific ip address Grant authority to users. 12grant all privileges on [db_name].[db_table_name] to [mysql_user_name]@[the_value_of_host] identified by '[mysql_user_password]';flush privileges; The value of [the_value_of_host]: %: connect to mysql server from any other machine localhost: just local host ip_address: specific ip address [all privileges] can be set with specific authority(“select,delete,update,create,drop”) [db_name] can be set with all databases(“*”) [db_table_name] can be set with all tables(“*”) Update password. 12345mysql -uroot -puse mysql;update user set password=password('your_new_password') where user='user_name' and host='host_name';flush privileges; Delete users. 12345mysql -uroot -puse mysql;delete from user where user='user_name' and host='host_name';flush privileges; Attention:It cannot be active when you forgot to run a command(“flush privileges”).]]></content>
+      <categories>
+        <category>Operation</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Mysql</tag>
@@ -31,9 +48,9 @@
         <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>Hexo</tag>
         <tag>Blog</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
