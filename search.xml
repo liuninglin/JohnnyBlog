@@ -38,7 +38,7 @@
   <entry>
     <title><![CDATA[Setting Up a Hive Connection with Kerberos using Apache JDBC Drivers]]></title>
     <url>%2Fposts%2F7c77d84.html</url>
-    <content type="text"><![CDATA[Before we start to code, we need to ensure that we already have a excellent Ambari environment with Kerberos. Then we ought to check the version of services in ambari. Log in the ambari management website, then click the button on top of the website. Now, we can obtain the versions of all components. Remember the versions of HDFS and Hive.]]></content>
+    <content type="text"><![CDATA[PreparationBefore we start to code, we need to ensure that we already have a excellent Ambari environment with Kerberos. Then we ought to check the version of services in ambari. Log in the Ambari UI, then click the button on top of the website. Now, we can obtain the versions of all components. Remember the versions of HDFS and Hive. Coding Specifying the version of the dependency of Hive JDBC Ensuring your Hive JDBC URLWe can use]]></content>
   </entry>
   <entry>
     <title><![CDATA[Enable Kerberos on Ambari]]></title>
