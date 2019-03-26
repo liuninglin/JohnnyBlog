@@ -2067,7 +2067,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6c1fa1;
+  background: #ff823d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2907,4 +2907,26 @@ pre {
   -webkit-box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
   box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
   z-index: 3;
+}
+.zhao-cover-img-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10002;
+  text-align: center;
+  background-color: #000;
+  overflow-y: scroll;
+}
+.zhao-cover-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.zhao-no-scroll {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
